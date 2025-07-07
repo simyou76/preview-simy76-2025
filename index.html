@@ -6,15 +6,16 @@
   <title>Creative Studio</title>
   <style>
     * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
     }
 
     body {
-      font-family: Arial, sans-serif;
-      background-color: #fff;
+      font-family: sans-serif;
+      background: #fff;
       color: #111;
+      overflow-x: hidden;
     }
 
     header {
@@ -24,29 +25,26 @@
       width: 100%;
       background: #fff;
       padding: 1rem 2rem;
+      z-index: 10;
       border-bottom: 1px solid #eee;
-      display: flex;
-      justify-content: space-between;
-      z-index: 1000;
     }
 
-    header nav a {
-      margin-left: 1rem;
-      text-decoration: none;
-      color: #333;
-      font-size: 0.9rem;
+    header nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
 
     main {
-      padding-top: 100px;
+      padding-top: 80px;
     }
 
     .hero {
       height: 100vh;
       display: flex;
-      flex-direction: column;
       justify-content: center;
       align-items: center;
+      flex-direction: column;
       text-align: center;
       padding: 2rem;
     }
@@ -57,41 +55,38 @@
     }
 
     .hero p {
-      font-size: 1rem;
-      max-width: 600px;
+      font-size: 1.2rem;
       color: #555;
     }
 
     .projects {
       display: flex;
-      flex-direction: column;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
     }
 
     .project {
+      flex: 0 0 100vw;
       height: 100vh;
-      background: #f5f5f5;
+      scroll-snap-align: start;
+      position: relative;
       display: flex;
-      flex-direction: column;
-      justify-content: center;
       align-items: center;
-      text-align: center;
+      justify-content: center;
+      background-size: cover;
+      background-position: center;
+      color: #fff;
+      font-size: 2rem;
       padding: 2rem;
     }
 
-    .project h2 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-    }
-
-    .project p {
-      font-size: 1rem;
-      color: #666;
-      max-width: 500px;
-    }
+    .project:nth-child(odd) { background: url('https://via.placeholder.com/1600x900?text=Projekt+Bild+1') center/cover no-repeat; }
+    .project:nth-child(even) { background: url('https://via.placeholder.com/1600x900?text=Projekt+Bild+2') center/cover no-repeat; }
 
     footer {
-      padding: 2rem;
       text-align: center;
+      padding: 1rem;
       font-size: 0.8rem;
       color: #aaa;
     }
@@ -99,38 +94,31 @@
 </head>
 <body>
   <header>
-    <div><strong>Creative Studio</strong></div>
     <nav>
-      <a href="#home">Home</a>
-      <a href="#projects">Projekte</a>
-      <a href="#contact">Kontakt</a>
+      <div><strong>Creative Studio</strong></div>
+      <div>
+        <a href="#">Home</a> |
+        <a href="#projekte">Projekte</a> |
+        <a href="#kontakt">Kontakt</a>
+      </div>
     </nav>
   </header>
 
   <main>
-    <section class="hero" id="home">
+    <section class="hero">
       <h1>Design mit Haltung</h1>
       <p>Strategisches Creative Direction & visuelle Konzepte mit Wirkung – inspiriert vom PixelPier NYC-Stil.</p>
     </section>
 
-    <section class="projects" id="projects">
-      <div class="project">
-        <h2>Projekt 1</h2>
-        <p>Kurzer Beschreibungstext zu Projekt 1. Hier kommt ein Platzhalter für ein zukünftiges Bild.</p>
-      </div>
-      <div class="project">
-        <h2>Projekt 2</h2>
-        <p>Kurzer Beschreibungstext zu Projekt 2. Hier kommt ein Platzhalter für ein zukünftiges Bild.</p>
-      </div>
-      <div class="project">
-        <h2>Projekt 3</h2>
-        <p>Kurzer Beschreibungstext zu Projekt 3. Hier kommt ein Platzhalter für ein zukünftiges Bild.</p>
-      </div>
+    <section class="projects" id="projekte">
+      <div class="project">Projekt 1 – <br/> <em>Bildfläche (Platzhalter)</em> <br/> <small>Kurze Beschreibung des Projekts.</small></div>
+      <div class="project">Projekt 2 – <br/> <em>Bildfläche (Platzhalter)</em> <br/> <small>Kurze Beschreibung des Projekts.</small></div>
+      <div class="project">Projekt 3 – <br/> <em>Bildfläche (Platzhalter)</em> <br/> <small>Kurze Beschreibung des Projekts.</small></div>
     </section>
   </main>
 
   <footer>
-    &copy; 2025 Creative Studio – Alle Rechte vorbehalten
+    © 2025 Creative Studio – Alle Rechte vorbehalten
   </footer>
 </body>
 </html>
