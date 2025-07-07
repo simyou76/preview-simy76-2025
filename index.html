@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Creative Studio</title>
   <style>
     * {
@@ -12,10 +12,9 @@
     }
 
     body {
-      font-family: sans-serif;
-      background: #fff;
+      font-family: 'Helvetica Neue', sans-serif;
+      background: #f9f9f9;
       color: #111;
-      overflow-x: hidden;
     }
 
     header {
@@ -24,15 +23,20 @@
       left: 0;
       width: 100%;
       background: #fff;
-      padding: 1rem 2rem;
-      z-index: 10;
-      border-bottom: 1px solid #eee;
-    }
-
-    header nav {
+      padding: 1.2rem 2rem;
+      border-bottom: 1px solid #ddd;
+      z-index: 1000;
       display: flex;
       justify-content: space-between;
       align-items: center;
+    }
+
+    header nav a {
+      margin-left: 1.5rem;
+      text-decoration: none;
+      color: #111;
+      font-weight: 500;
+      font-size: 0.9rem;
     }
 
     main {
@@ -40,17 +44,19 @@
     }
 
     .hero {
-      height: 60vh;
+      height: 100vh;
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
-      flex-direction: column;
+      background: #ffffff;
       text-align: center;
       padding: 2rem;
     }
 
     .hero h1 {
       font-size: 3rem;
+      font-weight: 700;
       margin-bottom: 1rem;
     }
 
@@ -64,81 +70,92 @@
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 2rem;
-      padding: 2rem;
+      padding: 4rem 2rem;
+      background: #fff;
     }
 
     .project {
-      background: #f5f5f5;
-      padding: 1rem;
-      text-align: center;
+      background: #fff;
       border: 1px solid #eee;
-      border-radius: 8px;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.05);
     }
 
     .project img {
       width: 100%;
       height: auto;
-      border-radius: 4px;
-      margin-bottom: 1rem;
+      display: block;
     }
 
-    .project h2 {
-      font-size: 1.5rem;
+    .project-content {
+      padding: 1.5rem;
+    }
+
+    .project-content h2 {
+      font-size: 1.4rem;
       margin-bottom: 0.5rem;
     }
 
-    .project p {
+    .project-content p {
       font-size: 1rem;
       color: #666;
     }
 
     footer {
       text-align: center;
-      padding: 1.5rem;
-      font-size: 0.8rem;
-      color: #aaa;
+      padding: 2rem;
+      background: #f0f0f0;
+      font-size: 0.9rem;
+      color: #888;
     }
   </style>
 </head>
 <body>
   <header>
+    <div><strong>Creative Studio</strong></div>
     <nav>
-      <div><strong>Creative Studio</strong></div>
-      <div>
-        <a href="#">Home</a> |
-        <a href="#projekte">Projekte</a> |
-        <a href="#kontakt">Kontakt</a>
-      </div>
+      <a href="#">Home</a>
+      <a href="#projects">Projekte</a>
+      <a href="#kontakt">Kontakt</a>
     </nav>
   </header>
 
   <main>
     <section class="hero">
-      <h1>Design mit Haltung</h1>
-      <p>Strategisches Creative Direction & visuelle Konzepte mit Wirkung – inspiriert vom PixelPier NYC-Stil.</p>
+      <h1>We Create Experiences</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam venenatis, nisl in bibendum.</p>
     </section>
 
-    <section class="project-grid" id="projekte">
+    <section class="project-grid" id="projects">
       <div class="project">
-        <img src="https://via.placeholder.com/600x400?text=Projekt+1" alt="Projekt 1 Bild">
-        <h2>Projekt 1</h2>
-        <p>Kurze Beschreibung des Projekts 1. (Platzhaltertext)</p>
+        <img src="https://via.placeholder.com/600x400/ddd/000?text=Projekt+1" alt="Projekt 1">
+        <div class="project-content">
+          <h2>Projekt 1</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vitae orci fermentum, laoreet elit sit amet.</p>
+        </div>
       </div>
+
       <div class="project">
-        <img src="https://via.placeholder.com/600x400?text=Projekt+2" alt="Projekt 2 Bild">
-        <h2>Projekt 2</h2>
-        <p>Kurze Beschreibung des Projekts 2. (Platzhaltertext)</p>
+        <img src="https://via.placeholder.com/600x400/ccc/000?text=Projekt+2" alt="Projekt 2">
+        <div class="project-content">
+          <h2>Projekt 2</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget risus vitae lacus vestibulum bibendum.</p>
+        </div>
       </div>
+
       <div class="project">
-        <img src="https://via.placeholder.com/600x400?text=Projekt+3" alt="Projekt 3 Bild">
-        <h2>Projekt 3</h2>
-        <p>Kurze Beschreibung des Projekts 3. (Platzhaltertext)</p>
+        <img src="https://via.placeholder.com/600x400/bbb/000?text=Projekt+3" alt="Projekt 3">
+        <div class="project-content">
+          <h2>Projekt 3</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas in suscipit sapien, a tincidunt leo.</p>
+        </div>
       </div>
     </section>
   </main>
 
   <footer>
-    © 2025 Creative Studio – Alle Rechte vorbehalten
+    &copy; 2025 Creative Studio. All rights reserved.
   </footer>
 </body>
 </html>
